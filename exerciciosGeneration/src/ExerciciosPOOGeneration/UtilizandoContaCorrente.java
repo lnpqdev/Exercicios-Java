@@ -25,8 +25,9 @@ public class UtilizandoContaCorrente {
 		numeroDaConta = entrada.nextInt();
 		NovaContaCorrente.setNumeroDaConta(numeroDaConta);
 		
-		System.out.println("Seu Saldo Atual é: " +saldoAtual);
-		NovaContaCorrente.setSaldoAtual(saldoAtual);
+		NovaContaCorrente.mostraNumeroDaAgencia();
+		NovaContaCorrente.mostraNumeroDaConta();
+		
 		
 		valor = 0;
 		
@@ -34,6 +35,8 @@ public class UtilizandoContaCorrente {
 			System.out.println("Seja Bem Vindo ! O que deseja fazer ?");
 			System.out.println(" 1) Deposito");
 			System.out.println(" 2) Saque");
+			System.out.println(" 3) Saldo");
+			System.out.println(" 4) Consultar Agência e Conta");
 			System.out.println(" 0) Sair");
 			
 			System.out.println(" Digite o código da Operação desejada: ");
@@ -41,32 +44,46 @@ public class UtilizandoContaCorrente {
 			
 			if( valor != 0) {
 				
-				System.out.println("Realize a Operação...");
+				//System.out.println("Realize a Operação...");
 				
 			if ( valor == 1) {
 				
 				System.out.println("Informe o valor a Ser Depositado: ");
 				operacaoDeposito = entrada.nextInt();
 				saldoAtual = saldoAtual + operacaoDeposito;
+				System.out.println("--------------------------------");
 				NovaContaCorrente.setSaldoAtual(saldoAtual);
 				NovaContaCorrente.mostraSaldoAtual();
+				System.out.println("--------------------------------");
 				
 			} else {
 				if ( valor == 2) {
 					System.out.println("Informe o valor a ser sacado: ");
 					operacaoSaque= entrada.nextInt();
 					saldoAtual = saldoAtual - operacaoSaque;
+					System.out.println("--------------------------------");
 					NovaContaCorrente.setSaldoAtual(saldoAtual);
 					NovaContaCorrente.mostraSaldoAtual();
+					System.out.println("--------------------------------");
 				}
+				if ( valor == 3) {
+					System.out.println("--------------------------------");
+					NovaContaCorrente.mostraSaldoAtual();
+					System.out.println("--------------------------------");
+				}
+				
+			}if ( valor == 4) {
+				
+				System.out.println("---------------------");
+				NovaContaCorrente.mostraNumeroDaAgencia();
+				NovaContaCorrente.mostraNumeroDaConta();
+				System.out.println("---------------------");
 			}
 				
 			}
 		}while ( valor != 0);
 			
-		NovaContaCorrente.mostraNumeroDaAgencia();
-		NovaContaCorrente.mostraNumeroDaConta();
-		NovaContaCorrente.mostraSaldoAtual();
+		
 		System.out.println("Volte Sempre para o Seu Banco feito para Você!");
 
 		

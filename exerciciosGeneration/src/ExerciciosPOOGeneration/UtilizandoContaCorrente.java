@@ -25,8 +25,10 @@ public class UtilizandoContaCorrente {
 		numeroDaConta = entrada.nextInt();
 		NovaContaCorrente.setNumeroDaConta(numeroDaConta);
 		
+		System.out.println("--------------------------------");
 		NovaContaCorrente.mostraNumeroDaAgencia();
 		NovaContaCorrente.mostraNumeroDaConta();
+		System.out.println("--------------------------------");
 		
 		
 		valor = 0;
@@ -81,6 +83,7 @@ public class UtilizandoContaCorrente {
 			}
 				
 			}
+			
 		}while ( valor != 0);
 			
 		

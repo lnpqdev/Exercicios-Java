@@ -80,7 +80,7 @@ public class ContaCorrente {
 	}
 	
 	public void mostraSaldoAtual() {
-		System.out.println("Seu Saldo em Conta é: "+getSaldoAtual());
+		System.out.println("Seu Saldo em Conta é: R$"+getSaldoAtual());
 	}
 	
 
